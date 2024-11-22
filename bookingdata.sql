@@ -1,0 +1,2 @@
+INSERT INTO `booking` (`Booking_ID`, `Customer_ID`, `Room_ID`, `Checkin_Date`, `Checkout_date`, `Contact_Number`, `room_review`, `booking_extras`) VALUES
+( 1, 1, 1, '2024-03-15', '2024-08-16', '(123)1234-1343', '', '');
