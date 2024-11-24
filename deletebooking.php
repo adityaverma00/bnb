@@ -10,11 +10,8 @@
 
 <body>
     <?php
-
-
     include "config.php";
     $DBC = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBDATABASE);
-
     if (mysqli_connect_errno()) {
         echo "Error:Unable to connect to MySql." . mysqli_connect_error();
         exit; //stop processing the page further.
@@ -45,20 +42,12 @@
            
             //code here
             $id = cleanInput($_POST['id']); 
-
-
-
-
-
         } else {
             //code here
 
             $error++; //bump the error flag
             $msg .= 'Invalid Booking ID '; //append error message
             $id = 0;  
-
-
-           
         }
 
         if ($error == 0 and $id > 0) {
@@ -69,7 +58,6 @@
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
             echo "<h2>Booking details deleted.</h2>";  
-           
         } else {
             echo "<h5>$msg</h5>" . PHP_EOL;
         }

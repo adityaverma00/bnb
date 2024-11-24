@@ -12,12 +12,10 @@ if (mysqli_connect_errno()) {
     echo "Error: Unable to connect to MySQL. ".mysqli_connect_error() ;
     exit; //stop processing the page further
 }
-
 //function to clean input but not validate type and content
 function cleanInput($data) {  
   return htmlspecialchars(stripslashes(trim($data)));
 }
-
 //retrieve the Roomid from the URL
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $id = $_GET['id'];
@@ -26,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         exit;
     } 
 }
-
 //the data was sent using a formtherefore we use the $_POST instead of $_GET
 //check if we are saving data first by checking if the submit button exists in the array
 if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] == 'Delete')) {     
@@ -55,7 +52,6 @@ if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] =
     }      
 
 }
-
 //prepare a query and send it to the server
 //NOTE for simplicity purposes ONLY we are not using prepared queries
 //make sure you ALWAYS use prepared queries when creating custom SQL like below

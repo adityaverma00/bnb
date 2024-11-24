@@ -113,9 +113,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
     $formVisible = true;
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,7 +133,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
         });
     </script>
 </head>
-
 <body>
     <h1>Update ticket</h1>
     <h2>
@@ -169,7 +165,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
                 <input type="text" id="Checkout_date" name="Checkout_date" placeholder="yyyy-mm-dd" required value="<?php echo $row['Checkout_date'] ?? ''; ?>">
                 </p>
             <p>
-
                 <label for="Contact_Number">Contact Number:</label>
                 <input type="text" id="Contact_Number" name="Contact_Number" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="(###) ###-####" title="Format: (123) 456-7890" required value="<?php echo $row['Contact_Number'] ?? ''; ?>">
                 </p>
@@ -196,6 +191,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']) && $_POST['s
     mysqli_close($DBC);
     ?>
 </body>
-
 </html>
 

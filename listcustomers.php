@@ -68,9 +68,6 @@ function searchResult(searchstr) {
 </form>
 <table id="tblcustomers" border="1">
 <thead><tr><th>Lastname</th><th>Firstname</th><th>actions</th></tr></thead>
-
-
-
 </table>
 </body>
 </html>

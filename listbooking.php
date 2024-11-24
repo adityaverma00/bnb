@@ -7,11 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse bookings</title>
 </head>
-
 <body>
-
     <?php
-   
     include "config.php";
     include "checksession.php";
     checkUser();
@@ -34,8 +31,6 @@
 
     $result = mysqli_query($DBC, $query);
     $rowcount = mysqli_num_rows($result);
-
-        
     ?>
     <h6>Logged in as <?php echo $un ?></h6>
     <h1>Current Bookings</h1>
@@ -66,20 +61,9 @@ if ($rowcount > 0) {
 } else {
     echo "<tr><td colspan='3'><h2>No bookings found!</h2></td></tr>";
 }
-             
-
-
-
-
-        mysqli_free_result($result);
+mysqli_free_result($result);
         mysqli_close($DBC);
-
         ?>
-
     </table>
-
-
-
 </body>
-
 </html>

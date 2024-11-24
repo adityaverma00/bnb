@@ -12,11 +12,7 @@ although it can also be passed via URL parameters.
 // session_start() must be called before any output is sent to the browser. 
 It initializes the session and allows you to work with session variables ($_SESSION) in your PHP scripts.
  */
- 
 session_start();
-
-
-
 // This PHP function checkUser() is intended to verify whether a user is logged in or not.
 
 

@@ -143,13 +143,11 @@ $rowcount1 = mysqli_num_rows($result1);
                 ?>
             </select>
         </div>
-
         <br>
         <div>
             <label for="depa">Check-in Date:</label>
             <input type="text" id="depa" name="depa" placeholder="yyyy-mm-dd" required>
         </div>
-
         <br>
         <div>
             <label for="arr">Check-out Date:</label>
@@ -165,17 +163,13 @@ $rowcount1 = mysqli_num_rows($result1);
             <label for="booking_extras">Booking Extras:</label>
             <input type="text" id="booking_extras" name="booking_extras">
         </div>
-
         <br>
         <div>
             <input type="submit" name="submit" value="Book">
             <a href='bookingslisting.php'>[Cancel]</a>
         </div>
     </form>
-
         <hr>
- 
-
         <h3>Search for room availability</h3>
 <div>
 <form id="searchForm" method="get" name="searching">
