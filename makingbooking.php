@@ -69,6 +69,19 @@ if (isset($_POST['submit']) && !empty($_POST['submit']) && ($_POST['submit'] == 
 
     $checkinDate = new DateTime($checkin);
     $checkoutDate = new DateTime($checkout);
+// for the date range 
+    $query = "SELECT * FROM booking 
+    WHERE roomID = ? 
+    AND NOT (checkout_Date < ? OR checkin_Date > ?)";
+    $stmt = mysqli_prepare($DBC, $query);
+    mysqli_stmt_bind_param($stmt, 'iss', $room, $checkin, $checkout);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    if ($result->num_rows > 0) {
+        $error++;
+        $msg .= " The selected room is already booked for the specified date range.";
+    }
 
     if ($checkinDate >= $checkoutDate) {
         $error++;
