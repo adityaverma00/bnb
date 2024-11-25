@@ -179,7 +179,7 @@ $rowcount1 = mysqli_num_rows($result1);
         <br>
         <div>
             <input type="submit" name="submit" value="Book">
-            <a href='bookingslisting.php'>[Cancel]</a>
+            <a href='listbooking.php'>[Cancel]</a>
         </div>
     </form>
         <hr>
